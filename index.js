@@ -24,7 +24,7 @@ function createPost() {
 
   var blogPost = document.getElementsByTagName("main")[0];
   var postSection = document.getElementById("post");
-  var commentsSection = postSection.getElementsByTagName("footer")[0];
+  var commentsSection = postSection.getElementsByTagName("footer")[0].innerHTML;
 
   var blogPostHTML = pageTemplate();
   var postSectionHTML = postTemplate({ 'post_title': post_title, 'post_body': post_body, 'post_author': post_author });
