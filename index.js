@@ -26,7 +26,7 @@ function createPost() {
   var postSection = document.getElementById("post");
   var commentsSection = document.getElementsByTagName("footer")[0];
 
-  var postTemplateHTML = postTemplate({ 'post_title': post_title, 'post_body': post_body, 'post_author': post_author });
+  var postSectionHTML = postTemplate({ 'post_title': post_title, 'post_body': post_body, 'post_author': post_author });
 
-  postDiv.innerHTML += templateHTML;
+  postSection.innerHTML += postSectionHTML;
 }
