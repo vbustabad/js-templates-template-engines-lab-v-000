@@ -22,11 +22,15 @@ function createPost() {
   var pageTemplate = _.template(document.getElementById("page-template").innerHTML);
   var commentsTemplate = _.template(document.getElementById("comments-template").innerHTML);
 
-  var pageSection = document.getElementsByTagName("main")[0];
+  var mainBlogSection = document.getElementsByTagName("main")[0];
   var postSection = document.getElementById("post");
   var commentsSection = document.getElementsByTagName("footer")[0];
 
+  var mainBlogSectionHTML = pageTemplate();
   var postSectionHTML = postTemplate({ 'post_title': post_title, 'post_body': post_body, 'post_author': post_author });
+  var commentsSectionHTML = commentsTemplate();
 
+  mainBlogSection.innerHTML += mainBlogSectionHTML;
   postSection.innerHTML += postSectionHTML;
+  commentsSection.innerHTML += commentsSectionHTML;
 }
