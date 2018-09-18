@@ -22,7 +22,9 @@ function createPost() {
   var pageTemplate = _.template(document.getElementById("page-template").innerHTML);
   var commentsTemplate = _.template(document.getElementById("comments-template").innerHTML);
 
-  var postDiv = document.getElementById("post");
+  var pageSection = document.getElementsByTagName("main")[0];
+  var postSection = document.getElementById("post");
+  var commentsSection = document.getElementsByTagName("footer")[0];
 
   var postTemplateHTML = postTemplate({ 'post_title': post_title, 'post_body': post_body, 'post_author': post_author });
 
